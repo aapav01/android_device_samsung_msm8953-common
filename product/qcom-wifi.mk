@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
     macloader \
     wcnss_service \
     wpa_supplicant \
+    wificond \
     wpa_supplicant.conf
 
 # Wifi configuration files
