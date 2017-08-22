@@ -1,6 +1,5 @@
 # Audio
 PRODUCT_PACKAGES += \
-    audiod \
     audio.a2dp.default \
     audio.primary.msm8953 \
     audio_policy.default.so \
@@ -11,10 +10,13 @@ PRODUCT_PACKAGES += \
     libaudioroute \
     libqcompostprocbundle \
     libqcomvisualizer \
-    libqcomvoiceprocessing \
     libtinycompress \
-    tinymix \
     libtinyalsa
+
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.broadcastradio@1.0-impl
 
 # Audio configuration files
 PRODUCT_COPY_FILES += \
