@@ -233,7 +233,7 @@ on post-fs-data
 
     mkdir /data/misc/ipa 0700 net_admin net_admin
 
-    mkdir /data/misc/bluetooth 0770 bluetooth net_bt_stack
+    mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
 
     #create port-bridge log dir
     mkdir /data/misc/port_bridge 0770 radio radio
@@ -597,7 +597,7 @@ service config_bluetooth /system/bin/sh /system/etc/init.qcom.bt.sh "onboot"
 service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     class late_start
     user bluetooth
-    group bluetooth net_bt_admin net_bt_stack
+    group bluetooth net_bt_admin bluetooth
     disabled
     oneshot
 
@@ -638,7 +638,7 @@ service btsnoop /system/bin/btsnoop
 service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
     class late_start
     user root
-    group bluetooth net_bt_admin misc net_bt_stack oem_2950 net_bt
+    group bluetooth net_bt_admin misc bluetooth oem_2950 net_bt
     disabled
     oneshot
 
@@ -1035,7 +1035,7 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqb
 service wfdservice /system/bin/wfdservice
     class main
     user system
-    group audio camera inet net_bt_stack drmrpc media_rw media input net_admin
+    group audio camera inet bluetooth drmrpc media_rw media input net_admin
     #removed these because of limit of 12 groups
     #graphics net_bt net_bt_admin bluetooth
     disabled
