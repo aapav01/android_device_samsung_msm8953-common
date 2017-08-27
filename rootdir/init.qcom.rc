@@ -372,9 +372,6 @@ on post-fs-data
     # write /sys/block/dm-0/queue/read_ahead_kb 2048
     # write /sys/block/dm-1/queue/read_ahead_kb 2048
 
-    #Create directory for hostapd
-    mkdir /data/hostapd 0770 system wifi
-
     # give system access to wpa_supplicant.conf for backup and restore
     mkdir /data/misc/wifi 0770 wifi system
     chmod 0660 /data/misc/wifi/wpa_supplicant.conf
@@ -1170,13 +1167,6 @@ on property:init.svc.macloader=stopped
     chown system root /data/.rev
     chmod 0664 /data/.rev
 # end of WiFi MFG (TestMode)
-
-service hostapd /system/bin/hostapd -dddd /data/hostapd/hostapd.conf
-    class late_start
-    user root
-    group root
-    oneshot
-    disabled
 
 on property:dev.bootcomplete=1
     setprop sys.io.scheduler "bfq"
