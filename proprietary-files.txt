@@ -8,7 +8,7 @@ etc/Headset_cal.acdb
 etc/Speaker_cal.acdb
 
 # ADSP
-bin/adsprpcd
+bin/adsprpcd:vendor/bin/adsprpcd
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvadsp_stub.so
@@ -61,8 +61,8 @@ lib/soundfx/libaudioeffectoffload.so
 lib64/soundfx/libaudioeffectoffload.so
 
 # Bluetooth
-bin/btnvtool
-bin/hci_qcomm_init
+bin/btnvtool:vendor/bin/btnvtool
+bin/hci_qcomm_init:vendor/bin/btnvtool
 vendor/lib64/libbtnv.so
 
 # aptX
@@ -70,7 +70,7 @@ lib/libbt-codec_aptx.so
 lib/libbt-aptX-ARM-4.2.2.so
 
 # DRM
-bin/qseecomd
+bin/qseecomd:vendor/bin/qseecomd
 vendor/lib64/lib-sec-disp.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
@@ -221,8 +221,8 @@ etc/firmware/a530v3_seq.fw2
 # IMS
 -app/ImsSettings/ImsSettings.apk
 -priv-app/ImsLogger+/ImsLogger+.apk
-bin/imscmservice
-bin/imsd
+bin/imscmservice:vendor/bin/imscmservice
+bin/imsd:vendor/bin/imsd
 etc/permissions/qti-vzw-ims-internal.xml
 etc/permissions/imsmanager_library.xml
 etc/permissions/secimshttpclient_library.xml
@@ -292,9 +292,9 @@ vendor/media/LMspeed_508.emd
 vendor/media/PFFprec_600.emd
 
 # Perf
-bin/msm_irqbalance
-bin/iop
-bin/energy-awareness
+bin/msm_irqbalance:vendor/bin/msm_irqbalance
+bin/iop:vendor/bin/iop
+bin/energy-awareness:vendor/bin/energy-awareness
 -framework/QPerformance.jar
 vendor/bin/perfd
 lib64/libqti-iop.so
@@ -308,8 +308,8 @@ vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-iop-client.so
 
 # Peripheral manager
-bin/pm-proxy
-bin/pm-service
+bin/pm-proxy:vendor/bin/pm-proxy
+bin/pm-service:vendor/bin/pm-proxy
 vendor/lib64/libperipheral_client.so
 vendor/lib/libperipheral_client.so
 
@@ -320,9 +320,9 @@ vendor/lib/libdisp-aba.so|6749aaa2b91bccf5c474fcf0dbb528fce112b0e5
 vendor/lib64/libdisp-aba.so|fb6faa6b02b68b000d98bdc9e035c16971909d08
 
 # SSR
-bin/ssr_diag
-bin/ssr_setup
-bin/subsystem_ramdump
+bin/ssr_diag:vendor/bin/ssr_diag
+bin/ssr_setup:vendor/bin/ssr_setup
+bin/subsystem_ramdump:vendor/bin/subsystem_ramdump
 
 # Thermal
 etc/thermal-engine.conf
@@ -332,7 +332,7 @@ vendor/lib64/libthermalioctl.so
 vendor/lib/libthermalclient.so
 
 # Time service
-bin/time_daemon
+bin/time_daemon:vendor/bin/time_daemon
 -app/TimeService/TimeService.apk
 vendor/lib/libTimeService.so
 vendor/lib64/libTimeService.so
