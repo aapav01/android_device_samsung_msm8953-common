@@ -103,6 +103,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.smoothstreaming=true \
     media.msm8956hw=0 \
     mmp.enable.3g2=true \
+    persist.media.treble_omx=false \
     vidc.enc.disable_bframes=1 \
     vidc.disable.split.mode=1 \
     vidc.dec.downscalar_width=1920 \
