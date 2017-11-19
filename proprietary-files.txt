@@ -334,10 +334,8 @@ vendor/lib/libthermalclient.so
 # Time service
 bin/time_daemon:vendor/bin/time_daemon
 -app/TimeService/TimeService.apk
-vendor/lib/libTimeService.so
 vendor/lib64/libTimeService.so
--vendor/lib64/libtime_genoff.so
--vendor/lib/libtime_genoff.so
+vendor/lib64/libtime_genoff.so
 
 # WideVine
 vendor/lib/mediadrm/libwvdrmengine.so
