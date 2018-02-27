@@ -4,8 +4,8 @@
 # This is a common source of Android security bugs.
 #
 
-import init.rilchip.rc
-import init.rilcarrier.rc
+import /vendor/etc/init/hw/init.rilchip.rc
+import /vendor/etc/init/hw/init.rilcarrier.rc
 
 on init
 # [ SEC_SELINUX_PORTING_COMMON

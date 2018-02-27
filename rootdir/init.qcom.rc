@@ -25,10 +25,10 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import init.qcom.usb.rc
-import init.samsung.rc
-import init.target.rc
-import init.carrier.rc
+import /vendor/etc/init/hw/init.qcom.usb.rc
+import /vendor/etc/init/hw/init.samsung.rc
+import /vendor/etc/init/hw/init.target.rc
+import /vendor/etc/init/hw/init.carrier.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -586,12 +586,12 @@ service config_bt_addr /system/bin/btnvtool -O
     group bluetooth radio
     oneshot
 
-service config_bluetooth /system/bin/sh /system/etc/init.qcom.bt.sh "onboot"
+service config_bluetooth /vendor/bin/init.qcom.bt.sh "onboot"
     class core
     user root
     oneshot
 
-service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
+service hciattach /vendor/bin/init.qcom.bt.sh
     class late_start
     user bluetooth
     group bluetooth net_bt_admin bluetooth
@@ -603,13 +603,6 @@ on property:bluetooth.hciattach=true
 
 on property:bluetooth.hciattach=false
     setprop bluetooth.status off
-
-service hciattach_ath3k /system/bin/sh /system/etc/init.ath3k.bt.sh
-     class late_start
-     user bluetooth
-     group system bluetooth net_bt_admin misc
-     disabled
-     oneshot
 
 service bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0
     class late_start
@@ -846,7 +839,7 @@ service loc_launcher /vendor/bin/loc_launcher
     class late_start
     group gps inet oem_2950 wifi
 
-service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
+service fm_dl /vendor/bin/init.qcom.fm.sh
     class late_start
     user system
     group system
@@ -869,12 +862,12 @@ on property:drmdiag.load=1
 on property:drmdiag.load=0
     stop drmdiag
 
-service qcom-sh /system/bin/sh /init.qcom.sh
+service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
     oneshot
 
-service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
+service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     class late_start
     user root
     disabled
@@ -892,12 +885,6 @@ service wifi-sdio-on /system/bin/sh /system/etc/init.qcom.sdio.sh
     group wifi inet
     disabled
     oneshot
-
-service wifi-crda /system/bin/sh /system/etc/init.crda.sh
-   class late_start
-   user root
-   disabled
-   oneshot
 
 on property:sys.boot_completed=1
     start qcom-post-boot

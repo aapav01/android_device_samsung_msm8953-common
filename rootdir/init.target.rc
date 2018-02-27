@@ -40,7 +40,7 @@ on fs
 
     wait /dev/block/bootdevice
 
-    mount_all fstab.qcom
+    mount_all /vendor/etc/fstab.qcom
 
 on post-fs-data
     mkdir /data/tombstones 0771 system system
@@ -174,11 +174,6 @@ service time_daemon /system/bin/time_daemon
    user root
    group root readproc
 
-service audiod /system/bin/audiod
-   class late_start
-   user system
-   group system
-
 on boot
     start rmt_storage
 # access permission for secure touch
@@ -191,7 +186,7 @@ on boot
     chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch_enable
     chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch
 
-service wcnss-service /system/bin/wcnss_service
+service wcnss-service /vendor/bin/wcnss_service
     class main
     user system
     group system wifi radio
@@ -220,7 +215,7 @@ service ims_rtp_daemon /system/bin/ims_rtp_daemon
    group radio net_raw diag diag inet log
    disabled
 
-service imscmservice /system/bin/imscmservice
+service imscmservice /vendor/bin/imscmservice
    class main
    user system
    group radio net_raw diag diag log
@@ -313,7 +308,7 @@ on property:init.svc.per_mgr=running
 on property:sys.shutdown.requested=*
     stop per_proxy
 
-service energy-awareness /system/bin/energy-awareness
+service energy-awareness /vendor/bin/energy-awareness
     class main
     user root
     group system
