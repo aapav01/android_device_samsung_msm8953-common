@@ -13,12 +13,12 @@ service diag_uart_log /system/bin/diag_uart_log
 service qmuxd /system/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps nfc qcom_diag
+    group radio audio bluetooth gps nfc oem_2950
 
 service diag_mdlog_start /system/bin/diag_mdlog
     class late_start
     user sdcard_rw
-    group system qcom_diag sdcard_rw sdcard_r media_rw
+    group system oem_2950 sdcard_rw sdcard_r media_rw
     disabled
     oneshot
 
