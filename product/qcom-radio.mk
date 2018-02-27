@@ -25,9 +25,9 @@ PRODUCT_PACKAGES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/vendor/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/vendor/etc/permissions/android.hardware.telephony.cdma.xml \
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/vendor/etc/permissions/android.software.sip.voip.xml
 
 # Protobuf
 PRODUCT_PACKAGES += \
@@ -44,5 +44,5 @@ PRODUCT_PACKAGES += \
 
 # Security configuration file
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/sec_config:system/etc/sec_config \
-    $(COMMON_PATH)/configs/sec_config_oem:system/etc/sec_config_oem
+    $(COMMON_PATH)/configs/sec_config:system/vendor/etc/sec_config \
+    $(COMMON_PATH)/configs/sec_config_oem:system/vendor/etc/sec_config_oem
