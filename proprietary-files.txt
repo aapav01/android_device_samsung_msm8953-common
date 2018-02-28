@@ -193,13 +193,13 @@ lib64/libsdm-disp-apis.so:vendor/lib64/libsdm-disp-apis.so|629e27c4bb84af3758883
 vendor/lib/libscalar.so|b94311683c8ae9ff3363fc5cf729d9bc64589096
 vendor/lib/libsdm-color.so|9404c85d63894562733484ede557c3ac9635c52d
 vendor/lib/libsdm-diag.so|8613ea99b5fa79105657f8fc45982241a55c7fd2
-vendor/lib/libsdm-disp-vndapis.so|e0964709bc17595eb5cd9dedabf703117a2714f8
+-vendor/lib/libsdm-disp-vndapis.so|e0964709bc17595eb5cd9dedabf703117a2714f8
 vendor/lib/libsdmextension.so|5d539b3215c6551a1fedb8c167d2fa086c9ed1ff
 vendor/lib/libtinyxml2_1.so|fddc48298389f15337c65a1b1fa3361925fa937e
 vendor/lib64/libscalar.so|cf5a230e7720d86ac030eaaca7c96b153c83e475
 vendor/lib64/libsdm-color.so|0db611bb5babef142b35de1769865c1d50772bda
 vendor/lib64/libsdm-diag.so|77d9f47d47831211e9811b691e3271c720663816
-vendor/lib64/libsdm-disp-vndapis.so|c6f930ed2b3163b59b21ab8d0751a625b1d4308d
+-vendor/lib64/libsdm-disp-vndapis.so|c6f930ed2b3163b59b21ab8d0751a625b1d4308d
 vendor/lib64/libsdmextension.so|a2ac403747a4ad8716168b4f00721ec4fb19c5aa
 vendor/lib64/libtinyxml2_1.so|eb4cd93e051980b8b35f5eeebd3d980e033cb87f
 
