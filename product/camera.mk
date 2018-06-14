@@ -5,7 +5,6 @@ PRODUCT_PACKAGES += \
 # Samsung Camera Libraries
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl-legacy \
-    libjpega \
     camera.msm8953
 
 # Permissions
