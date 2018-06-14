@@ -19,12 +19,6 @@ on fs
     mkdir /dev/validity 0770 system system
     mkdir /data/validity 0770 system system
 
-# FINGERPRINT FRAMEWORK : starts fingerprintd
-service fingerprintd /system/bin/fingerprintd
-    class late_start
-    user system
-    group system
-
 on boot
 
 # permission for Input Device(Touchkey).
